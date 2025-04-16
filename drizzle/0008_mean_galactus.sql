@@ -1,0 +1,1 @@
+ALTER TABLE "video-to-post_user" ADD COLUMN "image_url" text NOT NULL;

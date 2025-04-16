@@ -1,0 +1,1 @@
+ALTER TABLE "video-to-post_post" ALTER COLUMN "description" SET NOT NULL;

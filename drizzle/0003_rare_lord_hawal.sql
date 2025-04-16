@@ -1,0 +1,1 @@
+ALTER TABLE "video-to-post_post" ALTER COLUMN "video_url" DROP NOT NULL;

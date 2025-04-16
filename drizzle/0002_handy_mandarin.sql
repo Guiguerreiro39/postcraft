@@ -1,0 +1,1 @@
+ALTER TABLE "video-to-post_post" ALTER COLUMN "updated_at" SET NOT NULL;
