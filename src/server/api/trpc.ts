@@ -113,17 +113,25 @@ export const publicProcedure = t.procedure.use(timingMiddleware);
 
 export const protectedProcedure = t.procedure
   .use(timingMiddleware)
-  .use((opts) => {
+  .use(async (opts) => {
     const { userId } = opts.ctx;
 
     if (!userId) {
       throw new Error("Unauthorized: user is not authenticated");
     }
 
+    const user = await opts.ctx.db.query.user.findFirst({
+      where: (user, { eq }) => eq(user.clerkId, userId),
+    });
+
+    if (!user) {
+      throw new Error("Unauthorized: user not found");
+    }
+
     return opts.next({
       ctx: {
         ...opts.ctx,
-        userId,
+        userId: user.id,
       },
     });
   });

@@ -1,6 +1,6 @@
 import { api, HydrateClient } from "@/trpc/server";
 import { POSTS_PER_PAGE } from "@/constants";
-import PostOverviewList from "@/domains/post/components/post-overview-list";
+import { PostsOverviewTable } from "@/domains/post/components/posts-overview-table";
 
 export default async function OverviewPage() {
   void api.post.getMany.prefetch({
@@ -9,7 +9,7 @@ export default async function OverviewPage() {
 
   return (
     <HydrateClient>
-      <PostOverviewList />
+      <PostsOverviewTable />
     </HydrateClient>
   );
 }

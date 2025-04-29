@@ -1,13 +1,15 @@
+"use client";
+
 import { SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar";
 import { POSTS_PER_PAGE } from "@/constants";
 import {
   PostItem,
   PostItemSkeleton,
 } from "@/domains/post/components/post-item";
-import { api } from "@/trpc/server";
+import { api } from "@/trpc/react";
 
-export const PostsSidebar = async () => {
-  const data = await api.post.getMany({
+export const PostsSidebar = () => {
+  const [data] = api.post.getMany.useSuspenseQuery({
     limit: POSTS_PER_PAGE,
   });
 

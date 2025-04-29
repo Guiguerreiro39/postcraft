@@ -19,7 +19,6 @@ import {
   PostsSidebarSkeleton,
 } from "@/domains/post/components/posts-sidebar";
 import { navigationItems } from "@/lib/navigation";
-import { HydrateClient } from "@/trpc/server";
 import { CirclePlus } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -57,11 +56,9 @@ export function AppSidebar() {
             </SidebarGroupAction>
           </DropdownCreatePost>
           <SidebarGroupContent>
-            <HydrateClient>
-              <Suspense fallback={<PostsSidebarSkeleton />}>
-                <PostsSidebar />
-              </Suspense>
-            </HydrateClient>
+            <Suspense fallback={<PostsSidebarSkeleton />}>
+              <PostsSidebar />
+            </Suspense>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
