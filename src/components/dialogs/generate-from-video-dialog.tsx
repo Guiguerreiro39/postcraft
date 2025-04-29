@@ -30,7 +30,7 @@ export const GenerateFromVideoDialog = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-fit">
+      <DialogContent className="w-fit max-w-none">
         <DialogHeader>
           <DialogTitle>Generate from video</DialogTitle>
           <DialogDescription>

@@ -50,7 +50,7 @@ export const FilterSlider = <T extends FieldValues>({
                       key={index}
                       className={cn(
                         "rounded-full px-3 py-1 text-muted-foreground",
-                        isActive && "bg-white text-foreground shadow",
+                        isActive && "bg-primary text-primary-foreground shadow",
                       )}
                       onClick={() => field.onChange(level)}
                     >

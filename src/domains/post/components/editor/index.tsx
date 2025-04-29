@@ -12,7 +12,7 @@ export const Editor = dynamic(() => import("./blocknote-editor"), {
 export const EditorLoading = () => (
   <Card className="h-[79.5vh]">
     <CardContent className="flex h-full items-center justify-center px-2 py-4">
-      <LogoLoading className="h-10 w-10" />
+      <LogoLoading height={40} width={40} />
     </CardContent>
   </Card>
 );

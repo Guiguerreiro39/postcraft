@@ -10,50 +10,22 @@ export const Hero = () => {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Streamline Your Workflow, Amplify Your Productivity
+                Transform Anything Into Engaging Blog Posts
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                The all-in-one platform that helps teams collaborate, manage
-                projects, and deliver results faster than ever before.
+                Generate, edit, and publish high-quality blog content from
+                YouTube videos or articles with just a few clicks. Save time and
+                expand your content reach.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" className="bg-rose-500 hover:bg-rose-600">
-                Start Free Trial
+              <Button size="lg">
+                Start Now
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" variant="outline">
                 Watch Demo
               </Button>
-            </div>
-            <div className="flex items-center space-x-4 text-sm">
-              <div className="flex -space-x-2">
-                <Image
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Avatar"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-background"
-                />
-                <Image
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Avatar"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-background"
-                />
-                <Image
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Avatar"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-background"
-                />
-              </div>
-              <div className="text-muted-foreground">
-                Trusted by <span className="font-medium">2,000+</span> teams
-                worldwide
-              </div>
             </div>
           </div>
           <Image

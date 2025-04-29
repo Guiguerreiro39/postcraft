@@ -1,8 +1,6 @@
-import { Logo } from "@/components/assets/logo";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { UserProfileDefault } from "@/components/user-profile-default";
 import { UserButton } from "@clerk/nextjs";
-import { User } from "lucide-react";
 
 export default function Navbar() {
   return (
